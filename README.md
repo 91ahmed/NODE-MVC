@@ -77,8 +77,9 @@ Postgresql (Doc) [https://node-postgres.com]
 Mysql (Doc) [https://github.com/mysqljs/mysql/tree/v0.9]
 
 ## Models
-To create a model class go to `app/models` and create a file like this 'Model.js'.
-Your model class should extends one of those classes MysqlModel or PostgreModel and you have to define your database table name like the following example.
+
+To create a model class go to `app/models` and create a file like this 'Model.js', 
+Your model class should extends one of those classes MysqlModel or PostgreModel and also you have to define the database table name like the following example.
 
 ``` js
 const MysqlModel   = require('../../modules/database/mysql')
@@ -100,6 +101,12 @@ module.exports = Model
 ```
 
 ## Views
+
+This framework use PugJs as a template engine, which consider a powerful tool for NodeJs to work with templates. To create view go to `app/views` and create you view file like this 'about.pug'.
+
+To read more about PugJs and how to use it go to pugjs.org
+[https://pugjs.org/api/getting-started.html]
+
 
 
 ## Controllers
