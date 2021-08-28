@@ -9,17 +9,17 @@ You should have a good background on nodeJs and how to use expressJs framework.
 ### Used Packages
 
 ``` json
-	"axios": "^0.19.2",
-	"cookie-parser": "^1.4.5",
-	"express": "^4.17.1",
-	"express-session": "^1.17.1",
-	"express-validator": "^6.8.0",
-	"mongodb": "^3.5.9",
-	"mysql": "^2.18.1",
-	"pg": "^8.3.0",
-	"pug": "^3.0.0",
-	"session-file-store": "^1.4.0",
-	"socket.io": "^3.0.4"
+"axios": "^0.19.2",
+"cookie-parser": "^1.4.5",
+"express": "^4.17.1",
+"express-session": "^1.17.1",
+"express-validator": "^6.8.0",
+"mongodb": "^3.5.9",
+"mysql": "^2.18.1",
+"pg": "^8.3.0",
+"pug": "^3.0.0",
+"session-file-store": "^1.4.0",
+"socket.io": "^3.0.4"
 ```
 
 ### How to install
