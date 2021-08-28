@@ -7,7 +7,7 @@
     "start": "node app.js"
   },
   "author": "ahmed hassan",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
     "cookie-parser": "^1.4.5",
