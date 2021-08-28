@@ -24,7 +24,7 @@ You should have a good background on nodeJs and express framework.
 
 ### How to install
 
-Just download the ZIP file or use "git clone" to get the repository from GitHub, then open the project folder and run the command below from terminal.
+Just download the ZIP file or use "git clone" to get the repository from GitHub, then open the project folder and run the following command from terminal.
 
 ``` json
 npm install
@@ -40,7 +40,7 @@ npm start
 
 Then open your web browser and go to "localhost:3000"
 
-If you get an issue because of the port, or you want to change the port number, Just open 'app.js' file and change the code below with your port.
+If you get an issue because of the port, or you want to change the port number, Just open 'app.js' file and change the following code with your port.
 
 ``` js
 const port = process.env.PORT || 3000;
@@ -50,11 +50,9 @@ const port = process.env.PORT || 3000;
 
 Connecting with databases and running queries extremely simple, The framework uses MySQL and Postgres modules to connect with database and uses custom query builder to create queries and worke with data.
 
-Postgress documentation
-[https://node-postgres.com/]
+:postgresql: [Documentation](https://node-postgres.com)
+:mysql: [Documentation](https://github.com/mysqljs/mysql/tree/v0.9)
 
-Mysql documentation
-[https://github.com/mysqljs/mysql/tree/v0.9]
 
 To connect with database, go to 'config.js' in this file you may define all of your database connections.
 
