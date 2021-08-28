@@ -77,7 +77,27 @@ Postgresql (Doc) [https://node-postgres.com]
 Mysql (Doc) [https://github.com/mysqljs/mysql/tree/v0.9]
 
 ## Models
+To create a model class go to `app/models` and create a file like this 'Model.js'.
+Your model class should extends one of those classes MysqlModel or PostgreModel and you have to define your database table name like the following example.
 
+``` js
+const MysqlModel   = require('../../modules/database/mysql')
+const PostgreModel = require('../../modules/database/postgresql')
+
+class Model extends MysqlModel 
+{
+    constructor ()
+    {
+    	// Super keyword to access the parent's properties and methods
+        super();
+
+        // Define database table
+        this.table = 'tablename';
+    }
+}
+
+module.exports = Model
+```
 
 ## Views
 
