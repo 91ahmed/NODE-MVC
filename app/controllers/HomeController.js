@@ -1,4 +1,4 @@
-// Use Models
+// Require Models
 const User = require('../models/User')
 
 exports.index = (req, res) => 
