@@ -8,10 +8,10 @@ const config = {
 	'mysql_port': 3306,
 
 	// PostgreSQL
-	'pg_host': 'localhost',//'ec2-174-129-199-54.compute-1.amazonaws.com',
-	'pg_user': 'postgres',//'mesrykjkphvmno',
-	'pg_password': '24882533',//'f971ea53e8f36cb61e03f6a08126bdde97c8fa35ed8cc783c690371c846ee9ec',
-	'pg_database': 'nodeapp',//'d5m25qeg628nop',
+	'pg_host': 'localhost',
+	'pg_user': 'postgres',
+	'pg_password': '24882533',
+	'pg_database': 'nodeapp',
 	'pg_port': 5432,
 };
 

@@ -9,10 +9,26 @@ You should have a good background on nodeJs and express framework.
 
 ### How to install
 
-Just download the ZIP file or use "git clone" to get the repository from Github, then open the project folder run this command below from your terminal.
+Just download the ZIP file or use "git clone" to get the repository from GitHub, then open the project folder and run the command below from terminal.
 
 ``` json
 npm install
+```
+
+### How to run the application
+
+After you had installed the project dependencies, Open the terminal and run this command.
+
+``` json
+npm start
+```
+
+Then open your web browser and go to localhost:3000
+
+If you get an issue because of the port or you want to change the port number, Just open 'app.js' file and change the code below with your port.
+
+``` js
+const port = process.env.PORT || 3000;
 ```
 
 ### Used Packages
