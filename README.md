@@ -75,3 +75,14 @@ module.exports = config
 
 Postgresql (Doc) [https://node-postgres.com]
 Mysql (Doc) [https://github.com/mysqljs/mysql/tree/v0.9]
+
+## Models
+
+
+## Views
+
+
+## Controllers
+
+
+## Routes
