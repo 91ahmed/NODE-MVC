@@ -48,11 +48,7 @@ const port = process.env.PORT || 3000;
 
 ### Database configuration
 
-Connecting with databases and running queries extremely simple, The framework uses MySQL and Postgres modules to connect with database and uses custom query builder to create queries and worke with data.
-
-Postgresql [https://node-postgres.com]
-Mysql [https://github.com/mysqljs/mysql/tree/v0.9]
-
+Connecting with databases and running queries extremely simple, The framework uses MySQL and Postgres modules to connect with database and uses custom query builder to create queries.
 
 To connect with database, go to 'config.js' in this file you may define all of your database connections.
 
@@ -76,3 +72,6 @@ const config = {
 
 module.exports = config
 ```
+
+Postgresql (Doc) [https://node-postgres.com]
+Mysql (Doc) [https://github.com/mysqljs/mysql/tree/v0.9]
