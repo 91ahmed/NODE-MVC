@@ -9,11 +9,12 @@ You should have a good background on nodeJs and express framework.
 ### Used Packages
 
 ``` json
-"axios": "^0.19.2",
-"cookie-parser": "^1.4.5",
+"node": "10.15.3"
 "express": "^4.17.1",
 "express-session": "^1.17.1",
 "express-validator": "^6.8.0",
+"axios": "^0.19.2",
+"cookie-parser": "^1.4.5",
 "mongodb": "^3.5.9",
 "mysql": "^2.18.1",
 "pg": "^8.3.0",
@@ -39,8 +40,18 @@ npm start
 
 Then open your web browser and go to "localhost:3000"
 
-If you get an issue because of the port or you want to change the port number, Just open 'app.js' file and change the code below with your port.
+If you get an issue because of the port, or you want to change the port number, Just open 'app.js' file and change the code below with your port.
 
 ``` js
 const port = process.env.PORT || 3000;
 ```
+
+### Database configuration
+
+Connecting with databases and running queries extremely simple, The framework uses mysql and postgres modules to connect with database and use a custom query builder to create queries.
+
+Postgress documentation
+[https://node-postgres.com/]
+
+Mysql documentation
+[https://github.com/mysqljs/mysql/tree/v0.9]
