@@ -6,6 +6,15 @@
 
 You should have a good background on nodeJs and how to use expressJs framework.
 
+
+### How to install
+
+Just download the ZIP file or use "git clone" to get the repository from Github, then open the project folder run this command below from your terminal.
+
+``` json
+npm install
+```
+
 ### Used Packages
 
 ``` json
@@ -20,12 +29,4 @@ You should have a good background on nodeJs and how to use expressJs framework.
 "pug": "^3.0.0",
 "session-file-store": "^1.4.0",
 "socket.io": "^3.0.4"
-```
-
-### How to install
-
-Just download the ZIP file or use "git clone" to get the repository from Github, then open the project folder run this command below from your terminal.
-
-``` json
-npm install
 ```
