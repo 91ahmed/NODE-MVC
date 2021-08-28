@@ -5,14 +5,8 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const port    = process.env.PORT || 3000;
 const server  = require('http').createServer(app);
-const io      = require('socket.io')(server);
 const cookieParser = require('cookie-parser');
 
-io.on('connection', (socket) => {
-	socket.on('chat-message', data => {
-		socket.broadcast.emit('send-data', data);
-	});
-});
 
 const routes  = require('./routes/routes');
 

@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-You should have a good background on nodeJs and how to use expressJs framework.
+You should have a good background on nodeJs and express framework.
 
 
 ### How to install
@@ -27,6 +27,5 @@ npm install
 "mysql": "^2.18.1",
 "pg": "^8.3.0",
 "pug": "^3.0.0",
-"session-file-store": "^1.4.0",
-"socket.io": "^3.0.4"
+"session-file-store": "^1.4.0"
 ```
