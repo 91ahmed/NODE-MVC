@@ -126,3 +126,20 @@ exports.index = (req, res) =>
 ```
 
 ## Routes
+
+The routes refers to the client URL request to a particular end point, routes are used to execute a spicifc controller and action when the routes is matched, all routes are stored in `routes\routes.js` the framework use expressJs to handle routes. 
+
+You should read about expressJs routes to know how to use routes.
+[https://expressjs.com/en/starter/basic-routing.html]
+
+To add new routes go to `routes\routes.js`
+``` js
+// Import your controllers
+const HomeController = require('../app/controllers/HomeController')
+
+module.exports = (app) => 
+{
+	// Add your routes here
+	app.get('/', HomeController.index)
+}
+```
