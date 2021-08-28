@@ -101,7 +101,8 @@ module.exports = Model
 
 ## Views
 
-This framework use PugJs as a template engine, which consider a powerful tool for NodeJs to work with templates. To create view go to `app/views` and create you view file like this `view.pug`.
+This framework use PugJs as a template engine, which consider a powerful tool for NodeJs to work with templates. 
+To create view go to `app/views` and create your view file like this `view.pug`.
 
 To read more about PugJs and how to use it go to pugjs.org 
 [https://pugjs.org/api/getting-started.html]
@@ -110,5 +111,18 @@ To read more about PugJs and how to use it go to pugjs.org
 
 ## Controllers
 
+The controllers are stored in `app/controllers` and I have created a `HomeController.js` as an example for creating controllers.
+
+the controller should be like the folloing example:
+
+``` js
+// Use Models and Libraries
+const User = require('../models/User')
+
+exports.index = (req, res) => 
+{   
+    res.render('app/index')
+}
+```
 
 ## Routes
