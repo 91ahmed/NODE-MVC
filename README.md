@@ -48,9 +48,9 @@ const port = process.env.PORT || 3000;
 
 ### Database configuration
 
-Connecting with databases and running queries extremely simple, The framework uses MySQL and Postgres modules to connect with database and uses custom query builder to create queries.
+Connecting with databases and running queries extremely simple, The framework use MySQL and Postgres modules to connect with database and provides a custom query builder to create queries and filters.
 
-To connect with database, go to 'config.js' in this file you may define all of your database connections.
+To connect with database go to 'config.js' in the root directory, in this file you may define all of your database connections.
 
 ``` js
 const config = {
