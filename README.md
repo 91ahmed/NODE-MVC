@@ -1,12 +1,12 @@
-## NODE-MVC
+## Welcome to the NODE-MVC framework
 
-#### A light-weight MVC framework based on node Js, express Js and some custom modules.
+#### A light-weight MVC framework based on node Js, express Js and some custom modules, It's free and open-source.
 
-### Prerequisites
+## Prerequisites
 
 You should have a good background on nodeJs and express framework.
 
-### Used Packages
+## Used Packages
 
 ``` json
 "node": "10.15.3"
@@ -22,7 +22,7 @@ You should have a good background on nodeJs and express framework.
 "session-file-store": "^1.4.0"
 ```
 
-### How to install
+## How to install
 
 Just download the ZIP file or use "git clone" to get the repository from GitHub, then open the project folder and run the following command from terminal.
 
@@ -30,7 +30,7 @@ Just download the ZIP file or use "git clone" to get the repository from GitHub,
 npm install
 ```
 
-### How to run the application
+## Run the application
 
 After you already had installed the project dependencies, Open the terminal and run this command to start the application.
 
@@ -46,9 +46,9 @@ If you get an issue because of the port, or you want to change the port number, 
 const port = process.env.PORT || 3000;
 ```
 
-### Database configuration
+## Database configuration
 
-Connecting with databases and running queries extremely simple, The framework use MySQL and Postgres modules to connect with database and provides a custom query builder to create queries and filters.
+Connecting with databases and running queries extremely simple, The framework use MySQL and Postgres modules to connect with database and provides a simple custom query builder to create queries and filters.
 
 To connect with database go to 'config.js' in the root directory, in this file you may define all of your database connections.
 
