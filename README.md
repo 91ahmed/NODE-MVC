@@ -76,7 +76,7 @@ module.exports = config
 Postgresql (Doc) [https://node-postgres.com]
 Mysql (Doc) [https://github.com/mysqljs/mysql/tree/v0.9]
 
-## Models
+## Model
 
 To create a model class go to `app/models` and create a file like this `Model.js`, Your model class should extend one of those classes MysqlModel or PostgreModel, and also you have to define the database table name like the following example.
 
@@ -99,7 +99,7 @@ class Model extends MysqlModel
 module.exports = Model
 ```
 
-## Views
+## View
 
 This framework use PugJs as a template engine, which consider a powerful tool for NodeJs to work with templates. 
 To create view go to `app/views` and create your view file with extension .pug like this `view.pug`.
@@ -109,7 +109,7 @@ To read more about PugJs and how to use it go to pugjs.org
 
 
 
-## Controllers
+## Controller
 
 The controllers are stored in `app/controllers` and I have created a `HomeController.js` as an example for creating controllers.
 
@@ -117,13 +117,56 @@ the controller should be like the folloing example:
 
 ``` js
 // Require Models and Libraries
-const User = require('../models/User')
+const Model = require('../models/model')
 
+// Create your methods
 exports.index = (req, res) => 
 {   
+	// render view
     res.render('app/index')
 }
+
+exports.home = (req, res) => 
+{
+	// send content
+	res.send('home page')	
+}
 ```
+
+### How to work with database
+
+The framework provides a convenient `QueryBuilder` to build and execute database queries, Just import the database model in the controller and start to use it like the following example.
+
+``` js
+// Require Model
+const User = require('../models/User')
+
+exports.users = (req, res) => 
+{   
+    // Get all users
+    new User().all().limit(2).get((data) => 
+    {
+        res.render('app/users', {users: data})
+    });
+}
+```
+
+### Select data from database
+
+Here are all functions that will help you to retrieving data from database.
+
+`.select()`
+
+It takes one parameter `string` to specify a custom "select" clause for the query.
+``` js
+new Model().select('id, email, username').get((data) => {
+    res.send(data)
+});
+```
+
+
+
+After creating you controller
 
 ## Routes
 
