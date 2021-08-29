@@ -3,7 +3,6 @@ const User = require('../models/User')
 
 exports.index = (req, res) => 
 {
-    /*
     var welcome = 'Welcome to node js mvc framework';
     var users   = [
         {'name': 'ahmed'},
@@ -13,7 +12,6 @@ exports.index = (req, res) =>
 
     
     res.render('app/index', {data: users, title: welcome})
-    */
 
     /** Working with database model
      * 
@@ -21,10 +19,4 @@ exports.index = (req, res) =>
             res.render('app/index', {data: users, title: welcome})
         });
      **/
-
-     var welcome = 'Welcome to node js mvc framework';
-
-    new User().all().whereIn('id', '1,2').get((users) => {
-        res.render('app/index', {data: users, title: welcome})
-    });
 }
