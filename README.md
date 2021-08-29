@@ -143,7 +143,7 @@ const User = require('../models/User')
 
 exports.users = (req, res) => 
 {   
-    // Get all users
+    // Get all users from database
     new User().all().limit(2).get((data) => 
     {
         res.render('app/users', {users: data})
@@ -164,9 +164,66 @@ new Model().select('id, email, username').get((data) => {
 });
 ```
 
+`.all()`
 
+Get all columns from table.
 
-After creating you controller
+`.where()`
+
+This function requires three arguments `column` `operator` `value`. <br/>
+The following query retrieves data where the value of the id less than 25.
+``` js
+new Model().all().where('id', '<', 25).get((data) => {
+    res.send(data)
+});
+```
+
+`.whereIsNull()` `.whereIsNotNull()`
+
+Verifies that the value of the given column is NULL or NOT NULL, The two functions requires one argument `column`
+
+``` js
+new Model().all().whereIsNull('column').get((data) => {
+    res.send(data)
+});
+```
+
+`.whereLike()`
+
+This function allows you to use the LIKE statement to search for a specified pattern,
+It requires two arguments `column` and `pattern`.
+
+``` js
+new Model().all().whereLike('column', '%pattern%').get((data) => {
+    res.send(data)
+});
+```
+
+`.whereIn()`
+
+whereIn function check that a given column's value is contained the same given values.
+It requires two arguments `column` and `values`.
+
+``` js
+new Model().all().whereIn('id', '1,5,8').get((data) => {
+    res.send(data)
+});
+```
+
+`.join()` `.leftJoin()` `.rightJoin()`
+
+These functions allow you to use joins in your query, You may even join multiple tables in a single query like the following example.
+
+``` js
+new Model()
+.all()
+.join('table', 'column1', '=', 'column2')
+.join('table2', 'column1', '=', 'column2')
+.leftJoin('table3', 'column1', '=', 'column2')
+.get((data) => {
+    res.send(data)
+});
+```
 
 ## Routes
 

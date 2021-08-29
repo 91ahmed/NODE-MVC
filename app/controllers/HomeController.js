@@ -24,7 +24,7 @@ exports.index = (req, res) =>
 
      var welcome = 'Welcome to node js mvc framework';
 
-    new User().select('id, name').get((users) => {
+    new User().all().whereIn('id', '1,2').get((users) => {
         res.render('app/index', {data: users, title: welcome})
     });
 }
