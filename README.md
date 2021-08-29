@@ -158,6 +158,7 @@ Here are all functions that will help you to retrieving data from database.
 `.select()`
 
 It takes one parameter `string` to specify a custom "select" clause for the query.
+
 ``` js
 new Model().select('id, email, username').get((data) => {
     res.send(data)
@@ -168,10 +169,37 @@ new Model().select('id, email, username').get((data) => {
 
 Get all columns from table.
 
+``` js
+new Model().all().get((data) => {
+    res.send(data)
+});
+```
+
+`.orderBy()`
+
+The ORDER BY keyword is used to sort the result-set in ascending (ASC) or descending (DESC) order, The function requires two arguments `column` and `sorting`
+
+``` js
+new Model().all().orderBy('id', 'DESC').get((data) => {
+    res.send(data)
+});
+```
+
+`.limit()`
+
+It used to limit the number of results returned from the query, It takes one integer argument `number`
+
+``` js
+new Model().all().limit(5).get((data) => {
+    res.send(data)
+});
+```
+
 `.where()`
 
 This function requires three arguments `column` `operator` `value`. <br/>
 The following query retrieves data where the value of the id less than 25.
+
 ``` js
 new Model().all().where('id', '<', 25).get((data) => {
     res.send(data)
@@ -210,6 +238,21 @@ new Model().all().whereIn('id', '1,5,8').get((data) => {
 });
 ```
 
+`.and()` `.or()`
+
+The AND condition and OR condition can be combined to test for multiple conditions in a SELECT, INSERT, UPDATE, or DELETE statement. <br/>
+The two functions signature is similar to that of the where method.
+
+``` js
+new Model()
+.all()
+.where('column1', '=', 'value')
+.and('column1', '=', 'value')
+.get((data) => {
+    res.send(data)
+});
+```
+
 `.join()` `.leftJoin()` `.rightJoin()`
 
 These functions allow you to use joins in your query, You may even join multiple tables in a single query like the following example.
@@ -217,9 +260,9 @@ These functions allow you to use joins in your query, You may even join multiple
 ``` js
 new Model()
 .all()
-.join('table', 'column1', '=', 'column2')
-.join('table2', 'column1', '=', 'column2')
-.leftJoin('table3', 'column1', '=', 'column2')
+.join('table1', 'table1.column', '=', 'table2.column')
+.join('table2', 'table2.column', '=', 'table3.column')
+.leftJoin('table3', 'table3.column', '=', 'table4.column')
 .get((data) => {
     res.send(data)
 });
@@ -247,6 +290,53 @@ These two functions allows you to add union and unionAll statements to your quer
 new Model().all().union('column1, column2', 'table').get((data) => {
     res.send(data)
 });
+```
+
+### Update data
+
+`.update()`
+
+It requires two parameters <br/>
+`data` object contains the date that you want to update
+`condition` object contians the condition of update statement.
+
+``` js
+new Model().update({
+	'column1': 'value1',
+	'column2': 'value2'
+}, {'column': '1'});
+```
+
+### Insert data
+
+`.insert()`
+
+It require one argument `data` object contains data to insert in database.
+
+``` js
+new Model().insert({
+	'column1': 'value1',
+	'column2': 'value2'
+});
+```
+
+### Delete data
+
+`.delete()`
+
+``` js
+new Model().delete({'column':'2'})
+```
+
+### Custom Query
+
+`.customQuery()`
+
+This function allows you to write your custom SQL query.
+
+``` js
+var data = new Model().customQuery('SELECT * FROM users').get()
+```
 
 
 ## Routes
