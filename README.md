@@ -127,7 +127,7 @@ exports.index = (req, res) =>
 
 ## Routes
 
-The routes refer to the client URL request to a particular end point, routes are used to execute a specific controller and action when the routes are matched, all routes are stored in `routes\routes.js`.
+The routes refer to the client URL request to a particular end point in order to execute a specific controller and action, all routes are stored in this path `routes\routes.js`.
 
 the framework use ExpressJs to handle routes, you should read about ExpressJs routes to know how to use it.
 [https://expressjs.com/en/starter/basic-routing.html]
