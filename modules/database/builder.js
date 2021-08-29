@@ -131,7 +131,7 @@ class QueryBuilder extends Connect
 		return this;
 	}
 
-	groupBy (column) 
+	groupBy (column)
 	{
 		this.sqlQuery += ' GROUP BY '+column+'';
 		return this;

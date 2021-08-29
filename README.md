@@ -225,6 +225,30 @@ new Model()
 });
 ```
 
+`.groupBy()` `.having()`
+
+The `groupBy` and `having` functions may be used to group the query results. The `having` function signature is similar to that of the where method.
+
+``` js
+new Model()
+.all()
+.groupBy('column')
+.having('column', '=', 'value')
+.get((data) => {
+    res.send(data)
+});
+```
+
+`.union()` `.unionAll()`
+
+These two functions allows you to add union and unionAll statements to your query, the Two functions takes two arguments `columns` `table`.
+
+``` js
+new Model().all().union('column1, column2', 'table').get((data) => {
+    res.send(data)
+});
+
+
 ## Routes
 
 The routes refer to the client URL request to a particular end point in order to execute a specific controller and action, all routes are stored in this path `routes\routes.js`.
