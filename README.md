@@ -297,7 +297,7 @@ new Model().all().union('column1, column2', 'table').get((data) => {
 `.update()`
 
 It requires two parameters <br/>
-`data` object contains the date that you want to update
+`data` object contains the date that you want to update <br/>
 `condition` object contians the condition of update statement.
 
 ``` js
@@ -311,7 +311,7 @@ new Model().update({
 
 `.insert()`
 
-It require one argument `data` object contains data to insert in database.
+It require one argument contains data to insert in database.
 
 ``` js
 new Model().insert({
