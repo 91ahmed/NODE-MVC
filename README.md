@@ -341,12 +341,11 @@ var data = new Model().customQuery('SELECT * FROM users').get()
 
 ## Routes
 
-The routes refer to the client URL request to a particular end point in order to execute a specific controller and action, all routes are stored in this path `routes\routes.js`.
+The routes refer to the client URL request to a particular end point in order to execute a specific controller and action, the framework uses ExpressJs to handle routes, you should read about ExpressJs routes to know how to use it.
 
-the framework use ExpressJs to handle routes, you should read about ExpressJs routes to know how to use it.
 [https://expressjs.com/en/starter/basic-routing.html]
 
-To add new routes go to `routes\routes.js`
+All routes are stored in this path `routes\routes.js`
 ``` js
 // Import your controllers
 const HomeController = require('../app/controllers/HomeController')
