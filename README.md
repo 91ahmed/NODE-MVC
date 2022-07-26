@@ -1,12 +1,8 @@
 ## Welcome to the NODE-MVC framework
 
-#### A light-weight MVC framework based on node Js, express Js and some custom modules, It's free and open-source.
+#### A light-weight MVC framework based on node Js, express Js and some custom modules. 
 
-## Prerequisites
-
-You should have a good background on nodeJs and express framework.
-
-## Used Packages
+## Packages
 
 ``` json
 "node": "10.15.3"
@@ -20,30 +16,6 @@ You should have a good background on nodeJs and express framework.
 "pg": "^8.3.0",
 "pug": "^3.0.0",
 "session-file-store": "^1.4.0"
-```
-
-## How to install
-
-Just download the ZIP file or use "git clone" to get the repository from GitHub, then open the project folder and run the following command from terminal.
-
-``` json
-npm install
-```
-
-## Run the application
-
-After you already had installed the project dependencies, Open the terminal and run this command to start the application.
-
-``` json
-npm start
-```
-
-Then open your web browser and go to "localhost:3000"
-
-If you get an issue because of the port, or you want to change the port number, Just open 'app.js' file and change the following code with your port.
-
-``` js
-const port = process.env.PORT || 3000;
 ```
 
 ## Database configuration
